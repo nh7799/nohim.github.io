@@ -1,0 +1,19 @@
+if (!reversing) {
+    el.textContent += words[k][i]
+    i++
+    if (i > words[k].length - 1) {
+        i = words[k].length
+        reversing = true
+    }
+
+}
+else {
+    el.textContent = words[k].slice(0, i)
+    console.log(words[k].slice(0, i));
+    i--;
+    if (i < 0) {
+        i = 0
+        reversing = false
+    }
+
+}

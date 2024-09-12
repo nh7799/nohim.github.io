@@ -1,0 +1,297 @@
+:root {
+  /* CSS HSL */
+  /* --dark-moss-green: hsla(74, 32%, 32%, 1);
+  --pakistan-green: hsla(88, 38%, 15%, 1);
+  --cornsilk: hsla(52, 94%, 94%, 1);
+  --earth-yellow: hsla(32, 65%, 62%, 1);
+  --tigers-eye: #bb6b25; */
+
+  /* CSS HSL */
+  /* --thistle: hsla(278, 35%, 78%, 1);
+  --fairy-tale: hsla(337, 100%, 89%, 1);
+  --carnation-pink: hsla(338, 100%, 84%, 1);
+  --uranian-blue: #bee0fe;
+  --light-sky-blue: hsla(209, 100%, 82%, 1); */
+  /* 
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+
+  --red-pantone: #e63946ff;
+  --honeydew: #f1faeeff;
+  --non-photo-blue: #a8dadcff;
+  --cerulean: #457b9dff;
+  --berkeley-blue: #1d3557ff; */
+
+  /* Primary Colors */
+  --primary-bg: #f7f5f2; /* Light beige background for a soft and clean look */
+  --primary-text: #2c2c2c; /* Dark grey for clear and easy-to-read text */
+  --accent-color: #d49a89; /* Warm blush pink to add a personal, emotional touch */
+
+  /* Secondary Colors */
+  --secondary-bg: #fff5e6; /* Soft peach background for sections */
+  --secondary-text: #8b5e3c; /* Earthy brown for headers or important text */
+  --highlight-color: #f4c542; /* Warm golden yellow to highlight key moments in your story */
+
+  /* Tertiary Colors */
+  --tertiary-bg: #f2f4f7; /* Light grey for subtle section dividers */
+  --tertiary-text: #6e7c7d; /* Cool grey-blue for less prominent text */
+
+  /* Button Colors */
+  --button-bg: #5584ac; /* Muted blue for a trustworthy and calm look */
+  --button-text: #ffffff; /* White text on buttons */
+  --button-hover-bg: #3d6a89; /* Slightly darker blue for hover effect */
+
+  /* Alert/Message Colors */
+  --success-color: #87c890; /* Soft green for success or positive moments */
+  --error-color: #d45d5d; /* Muted red for errors or emotional highlights */
+
+  /* Gradient for special sections */
+  --special-gradient: linear-gradient(135deg, #f4c542, #d49a89);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "PlayFair Display";
+  font-weight: 800;
+  overflow: hidden;
+}
+
+i {
+  font-family: "fontawesome 6";
+}
+
+.fa-angle-down {
+  font-size: 30px;
+}
+
+.auto-text,
+.auto-text-2 {
+  font-size: 50px;
+  position: relative;
+}
+
+.text {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  color: white;
+  font-size: 20rem;
+}
+
+.text::after {
+  position: absolute;
+  content: "";
+  right: 10;
+  bottom: 0;
+  height: 100%;
+  animation: blink 0.8s cubic-bezier(0, 0.5, 1, 1) infinite;
+  opacity: 0;
+  font-size: 2rem;
+  border-left: 2px solid white;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.pro-portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 1fr;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  /* background-image: url("./johann-siemens-EPy0gBJzzZU-unsplash.jpg"); */
+  position: relative;
+  background-size: cover;
+  position: relative;
+  cursor: none;
+  /* filter: grayscale(100%) brightness(20%); */
+}
+
+.pro-portfolio > * {
+  padding: 8px;
+}
+
+.container-row-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.1fr;
+  /* background-color: #87c890; */
+}
+
+.text-row {
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: aqua; */
+}
+
+.text-g {
+  color: var(--success-color) !important;
+  font-weight: 100;
+  font-size: 50px;
+  width: 100%;
+  padding: 20px;
+}
+
+.background-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+}
+.background-waves img {
+  /* color: aliceblue; */
+}
+
+.container-row-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* background-color: #fff; */
+}
+.container-row-1 > * {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--success-color);
+  line-height: 1.4;
+}
+.col-2 > * {
+  font-size: 40px;
+}
+.time-section {
+  /* background-color: var(--success-color); */
+  /* border: 1px solid var(--success-color); */
+  /* padding: 0; */
+}
+.nav-content1 {
+}
+
+@media (max-width: 600px) {
+  .text-g {
+    font-size: 30px;
+  }
+}
+
+.mouse-follower {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 10rem;
+  overflow: hidden;
+  transition: all 0.07s linear;
+  border: 1px solid white;
+}
+.mouse-follower::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 2;
+}
+.mouse-follower::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.ripple-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--eerie-black); */
+  z-index: 99;
+  border-radius: inherit;
+  opacity: 0.7;
+  transition: background-color 0.2s linear;
+}
+.ripple-effect:active {
+  background-color: var(--carnation-pink);
+}
+
+.rain-drop {
+  position: absolute;
+  width: 1px;
+  height: 300px;
+  background-color: var(--success-color);
+  right: 20px;
+  top: 0;
+  transition: all 0.8s linear;
+  border-radius: 100rem;
+  animation: fall 0.6s linear infinite;
+  padding: 0;
+  /* display: none; */
+  z-index: 1000;
+  transition: all 0.6s linear;
+}
+
+@keyframes fall {
+  from {
+    top: 0px;
+    opacity: 0.6;
+  }
+  to {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+#I {
+  /* color: rgb(198, 10, 19); */
+  position: relative;
+}
+
+#I::before {
+  content: "";
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  background-color: var(--slate-gray);
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  display: none;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}

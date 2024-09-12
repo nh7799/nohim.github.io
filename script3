@@ -1,0 +1,59 @@
+
+const autoText = document.querySelector('.text')
+const autoText2 = document.querySelector('.auto-text-2')
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+class type {
+    constructor(typeWords, el, speed) {
+        const wordsUn = typeWords.split(',')
+        let words = []
+
+        wordsUn.forEach((el => {
+            words.push(el.trim()[0].toUpperCase() + el.trim().slice(1, el.length))
+        }))
+
+        let i = 0
+        let k = 0
+        this.speed = speed
+
+        el.textContent = ''
+        let reversing = false
+        const typingAnimation = setInterval(() => {
+            if (!reversing) {
+                el.textContent += words[k][i]
+                if (i === words[k].length - 1) {
+                    reversing = true
+                    return
+                }
+                i++
+            }
+
+            else {
+                el.textContent = words[k].slice(0, i)
+                if (i === 0) {
+                    reversing = false
+                    if (k === words.length - 1) {
+                        k = 0
+                        return
+                    }
+                    k++
+                    return
+                }
+                i--;
+            }
+        }, getRandomInt(100, 180));
+
+    }
+
+
+    speedUp() {
+        this.speed -= 200
+        console.log(this.speed);
+    }
+
+}
+
+new type('An Emotional Catastrophe A book by me, No fr, lots of friends , software engineer, computer scientist', autoText, 190)
